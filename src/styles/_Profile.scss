@@ -6,7 +6,8 @@
     justify-content: space-evenly;
     padding: 1% 10% 1% 10%;
     align-items: center;
-    height: 35vh;
+    min-height: 225px;
+    height: 28vh;
 
     .user-photo {
       height: 200px;
@@ -43,20 +44,16 @@
           cursor: pointer;
           color: #f8f8f8;
           background-color: #5c5c5c;
-    
-          &:focus {
-            outline: none;
-          }
         }
       }
-  
+
       .user-about-me {
         margin: 0px auto 5px auto;
         text-align: left;
         color: #5c5c5c;
         font-weight: 500;
       }
-  
+
       .user-bio {
         height: 72px;
         text-align: justify;
@@ -70,45 +67,47 @@
       }
     }
   }
-  
 
   .view-tabs-section {
     display: flex;
     width: 100%;
     margin: auto;
-    background-color: #f8f8f8;
+    background-color: #eaeaed;
+    min-height: 40px;
     height: 5vh;
-
+    
     .upcoming-button,
     .wishlist-button,
     .past-button {
+      border: 1px solid #cecfd5;
       text-decoration: none;
       width: 33.33%;
       cursor: pointer;
-      border: none;
       color: #5c5c5c;
       letter-spacing: 1px;
       padding: 10px 0px;
       font-weight: 500;
-
+      
       &:hover {
-        color: #f8f8f8;
-        background-color: #adadad;
-      }
-
-      &:focus {
-        outline: none;
+        transition: all 0.3s ease-in;
+        color: blue;
       }
     }
 
     .active {
-      background-color: #5c5c5c;
-      color: #f8f8f8;
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #cecfd5;
+      border-bottom: none;
+
+      &:hover {
+        color: #000;
+      }
     }
   }
 }
 
-@media screen and (max-width: 920px) {  
+@media screen and (max-width: 920px) {
   .Profile {
     .user-profile {
       padding: 1% 2%;
@@ -116,7 +115,7 @@
 
     .bio-header {
       flex-direction: column;
-    }    
+    }
 
     .user-name {
       margin: 8px;
@@ -124,6 +123,36 @@
 
     .edit-profile-button {
       margin-left: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Profile {
+    .user-profile {
+      height: 22vh;
+
+      .user-photo {
+        height: 100px;
+        width: 100px;
+      }
+
+      .user-bio-section {
+        padding-left: 10px;
+
+        .user-bio {
+          height: 90px;
+          font-size: 14px;
+        }
+
+        .edit-profile-button {
+          font-size: 14px;
+        }
+      }
+
+      .user-name {
+        font-size: 16px;
+      }
     }
   }
 }
